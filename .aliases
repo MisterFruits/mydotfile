@@ -1,0 +1,18 @@
+# aliases
+# last change 10/01/2010
+
+alias ls='ls -G'
+
+alias c='clear'
+alias g='gnuplot'
+alias l='ls -CF'
+alias ll='ls -alF'
+alias lll='ls -AF'
+alias +='PS1="\[\e[1;31m\]\u@\h:\[\e[01;34m\]\w\[\e[0m\]$ "'
+alias _='PS1="\$ ";c'
+alias up='cd ..'
+alias upp='cd ../..'
+alias vi='vim'
+alias work='cd p;_'
+
+alias rasp='ssh pi@raspberrypi -X'
