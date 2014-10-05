@@ -1,0 +1,7 @@
+[user]
+	name = Victor
+	email = vic.toad.tor@free.fr
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.git/gitignore
