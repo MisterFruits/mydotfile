@@ -1,0 +1,7 @@
+
+# MacPorts Installer addition on 2011-11-06_at_14:20:16: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+#Cplex pour Pyton
+#export PYTHONPATH=$PYTHONPATH:/Users/snivel/Applications/IBM/ILOG/CPLEX_Studio_Preview124/cplex/python/x86_darwin9_gcc4.0/
