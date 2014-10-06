@@ -43,25 +43,17 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-
-
 bind "set bell-style none"
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
-if [ ! -f ~/.dirs ]; then  # if doesn't exist, create it
-        touch ~/.dirs
-fi
-
-alias show='cat ~/.dirs'
-save (){
-        command sed "/!$/d" ~/.dirs > ~/.dirs1; mv ~/.dirs1 ~/.dirs; echo "$@"="`pwd`" >> ~/.dirs; source ~/.dirs ;
-}
-source ~/.dirs  # Initialization for the above 'save' facility: source the .sdirs file
-shopt -s cdable_vars # set the bash option so that no '$' is required when using the above facility
-
-
 if [ -f ~/.aliases ]; then
     . ~/.aliases
+fi
+
+
+if [ -f ~/.git-completion.bash ]; then
+    #git autocompletion
+    source ~/.git-completion.bash
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -71,5 +63,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-#git autocompletion
-source ~/.git-completion.bash
+
