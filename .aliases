@@ -1,6 +1,3 @@
-# aliases
-# last change 10/01/2010
-
 alias ls='ls -G'
 
 alias c='clear'
