@@ -4,4 +4,4 @@
 [color]
 	ui = auto
 [core]
-	excludesfile = ~/.git/gitignore
+	excludesfile = ~/.gitignore
