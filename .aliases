@@ -1,10 +1,21 @@
-alias ls='ls -G'
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+    colorflag="--color"
+    echo "Unix color flag"
+else # OS X `ls`
+    colorflag="-G"
+    echo "Mac color flag"
+fi
+
+# List all files colorized in long format
+alias ls="ls -CF ${colorflag}"
+
 
 alias c='clear'
 alias g='gnuplot'
-alias l='ls -CF'
-alias ll='ls -alF'
-alias lll='ls -AF'
+alias l='ls'
+alias ll='ls -Al'
+alias lll='ls -A'
 alias +='PS1="\[\e[1;31m\]\u@\h:\[\e[01;34m\]\w\[\e[0m\]$ "'
 alias _='PS1="\$ ";c'
 alias up='cd ..'
