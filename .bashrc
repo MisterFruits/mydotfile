@@ -44,7 +44,6 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 bind "set bell-style none"
-bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
 if [ -f ~/.aliases ]; then
     . ~/.aliases
