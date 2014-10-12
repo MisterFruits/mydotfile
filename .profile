@@ -27,7 +27,10 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 #Promt
-export PS1='\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[00m\] \*$'
+# include .prompt if it exists
+if [ -f "$HOME/.prompt" ]; then
+. "$HOME/.prompt"
+fi
 
 
 export LC_ALL=en_US.UTF-8
