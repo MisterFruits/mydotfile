@@ -5,3 +5,8 @@
 	ui = auto
 [core]
 	excludesfile = ~/.gitignore
+[push]
+	default = simple
+[alias]
+	lg = log --all --graph --oneline --decorate
+	h = help -w
