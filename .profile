@@ -32,6 +32,10 @@ if [ -f "$HOME/.prompt" ]; then
 . "$HOME/.prompt"
 fi
 
-
+# Sphinx FIX
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# Virtualenv envvars
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev
