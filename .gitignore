@@ -15,3 +15,6 @@ Thumbs.db
 
 # Sublime workspace
 *.sublime-workspace
+
+# Python overage
+.coverage
