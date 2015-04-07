@@ -4,14 +4,3 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 #Cplex pour Pyton
 #export PYTHONPATH=$PYTHONPATH:/Users/snivel/Applications/IBM/ILOG/CPLEX_Studio_Preview124/cplex/python/x86_darwin9_gcc4.0/
-
-# set PATH so it includes macport installed Python binaries
-if [ -d "/opt/local/Library/Frameworks/Python.framework/Versions/Current/bin" ] ; then
-    PATH="/opt/local/Library/Frameworks/Python.framework/Versions/Current/bin:$PATH"
-fi
-
-# source virtualenv wrapper
-source /opt/local/Library/Frameworks/Python.framework/Versions/3.4/bin/virtualenvwrapper.sh
-
-#alias projects
-

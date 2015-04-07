@@ -41,6 +41,7 @@ export LANG=en_US.UTF-8
 # Virtualenv envvars
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
+source virtualenvwrapper.sh
 
 #rbenv bin dir
 if [ -d "$HOME/.rbenv/bin" ] ; then
