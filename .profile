@@ -41,6 +41,7 @@ export LANG=en_US.UTF-8
 # Virtualenv envvars
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
+export VIRTUAL_ENV_DISABLE_PROMPT='keep my prompt clean'
 source virtualenvwrapper.sh
 
 #rbenv bin dir
