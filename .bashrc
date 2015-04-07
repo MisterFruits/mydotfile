@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
-[ -z "$BASHRC_LOADED" ] && return
-BASHRC_LOADED ='YES!'
+[ -n "$BASHRC_LOADED" ] && return
+BASHRC_LOADED='YES!'
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -45,4 +45,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-
+# load profile if not loaded (becarefull to recursive inclusion)
+if [ -f ~/.profile ]; then
+    . ~/.profile
+fi
