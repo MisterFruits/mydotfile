@@ -1,15 +1,16 @@
 [user]
-	name = Victor
-	email = vic.toad.tor@free.fr
+    name = Victor
+    email = vic.toad.tor@free.fr
 [color]
-	ui = auto
+    ui = auto
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
 [push]
-	default = simple
+    default = simple
 [alias]
-	lg = log --all --graph --oneline --decorate
-	h = help -w
+    lg = log --all --graph --oneline --decorate
+    h = help -w
+    s = status -sb
 [merge]
     tool = sublimerge
 [mergetool "sublimerge"]
