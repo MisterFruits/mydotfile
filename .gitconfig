@@ -11,6 +11,9 @@
     lg = log --all --graph --oneline --decorate
     h = help -w
     s = status -sb
+    d = diff -w
+    unstage = reset HEAD --
+
 [merge]
     tool = sublimerge
 [mergetool "sublimerge"]

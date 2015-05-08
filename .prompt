@@ -47,11 +47,11 @@ prompt_git() {
             if [ -n "${remote}" ]; then
                 commit_ahead_nb="$(git rev-list --count $remote..HEAD)"
                 if [ $commit_ahead_nb != "0" ]; then
-                    s+="↑$commit_ahead_nb";
+                    s+=" ↑$commit_ahead_nb";
                 fi;
                 commit_after_nb="$(git rev-list --count HEAD..$remote)"
                 if [ $commit_after_nb != "0" ]; then
-                    s+="↓$commit_after_nb";
+                    s+=" ↓$commit_after_nb";
                 fi;
             fi
         fi;
