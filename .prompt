@@ -44,16 +44,20 @@ prompt_git() {
 			# TODO: use ORG_HEAD instad of fetching remote
             # Check for unpushed commits
             remote="$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null)"
+            origin_infos="";
             if [ -n "${remote}" ]; then
                 commit_ahead_nb="$(git rev-list --count $remote..HEAD)"
                 if [ $commit_ahead_nb != "0" ]; then
-                    s+=" ↑$commit_ahead_nb";
+                    origin_infos+="↑$commit_ahead_nb";
                 fi;
                 commit_after_nb="$(git rev-list --count HEAD..$remote)"
                 if [ $commit_after_nb != "0" ]; then
-                    s+=" ↓$commit_after_nb";
+                    origin_infos+="↓$commit_after_nb";
                 fi;
-            fi
+            else
+                origin_infos+="u"
+            fi;
+            [ -n "${origin_infos}" ] && s+=" ${origin_infos}"
         fi;
 
         # Get the short symbolic ref.
