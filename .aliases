@@ -22,6 +22,7 @@ alias -- -='cd -'
 alias vi='vim'
 alias cdp='cd ~/dev/pymapweb'
 alias cdd='cd ~/dev/mydotfile'
+alias subp='subl --project *.sublime-project'
 
 alias venv="workon"
 alias venv.exit="deactivate"
