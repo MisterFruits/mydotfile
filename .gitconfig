@@ -12,6 +12,7 @@
     h = help -w
     s = status -sb
     d = diff -w
+    dc = diff -w --cached
     unstage = reset HEAD --
 
 [merge]
