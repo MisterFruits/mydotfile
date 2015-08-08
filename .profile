@@ -43,6 +43,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
 export VIRTUAL_ENV_DISABLE_PROMPT='keep my prompt clean'
 source virtualenvwrapper.sh
+venv default
 
 #rbenv bin dir
 if [ -d "$HOME/.rbenv/bin" ] ; then
