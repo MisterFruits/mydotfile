@@ -5,6 +5,9 @@
 .DS_Store
 Desktop.ini
 
+# Cache files
+.*.swp
+
 # Thumbnail cache files
 ._*
 Thumbs.db
