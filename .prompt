@@ -129,10 +129,9 @@ else
     hostStyle="${yellow}";
 fi;
 
-# Set the terminal title to the current working directory.
-PS1="\[\033]0;\w\007\]";
+PS1="\[\033]0;\u@\h: \w\007\]"; # window title
 PS1+="\[${bold}\]\n"; # newline
-PS1+="\[${violet}\][\A] "; # username
+PS1+="\[${violet}\][\A] "; # time
 PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${white}\] at ";
 PS1+="\[${hostStyle}\]\h"; # host
