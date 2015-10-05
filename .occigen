@@ -1,0 +1,5 @@
+module purge
+module load git
+
+alias git='timeout -m -t 2 -i 1 -d 0 git'
+
