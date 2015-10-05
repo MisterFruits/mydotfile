@@ -26,6 +26,8 @@ declare -i timeout=DEFAULT_TIMEOUT
 declare -i interval=DEFAULT_INTERVAL
 # Delay between posting the SIGTERM signal and destroying the process by SIGKILL.
 declare -i delay=DEFAULT_DELAY
+# Wether millisecond should be used instead of seconds
+declare milli=false
 
 function printUsage() {
     cat <<EOF
@@ -48,17 +50,22 @@ Synopsis
         Delay between posting the SIGTERM signal and destroying the
         process by SIGKILL. Default value: $DEFAULT_DELAY seconds.
 
+    -m
+        Make timeout, interval and delay express in milliseconds
+        instead of seconds
+
 As of today, Bash does not support floating point arithmetic (sleep does),
 therefore all delay/time values must be integers.
 EOF
 }
 
 # Options.
-while getopts ":t:i:d:" option; do
+while getopts ":t:i:d:m" option; do
     case "$option" in
         t) timeout=$OPTARG ;;
         i) interval=$OPTARG ;;
         d) delay=$OPTARG ;;
+        m) milli=true ;;
         *) printUsage; exit 1 ;;
     esac
 done
@@ -76,7 +83,11 @@ fi
     ((t = timeout))
 
     while ((t > 0)); do
-        sleep $interval
+        if [ "$milli" = true ]; then
+            sleep "0.$interval"
+        else
+            sleep $interval
+        fi;
         kill -0 $$ || exit 0
         ((t -= interval))
     done
@@ -84,7 +95,11 @@ fi
     # Be nice, post SIGTERM first.
     # The 'exit 0' below will be executed if any preceeding command fails.
     kill -s SIGTERM $$ && kill -0 $$ || exit 0
-    sleep $delay
+    if [ "$milli" = true ]; then
+         sleep "0.$delay"
+    else
+         sleep $delay
+    fi;
     kill -s SIGKILL $$
 ) 2> /dev/null &
 
