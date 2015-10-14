@@ -38,12 +38,14 @@ fi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Virtualenv envvars
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/dev
-export VIRTUAL_ENV_DISABLE_PROMPT='keep my prompt clean'
-source virtualenvwrapper.sh
-venv default
+if [ -d "$HOME/.virtualenvs" ] ; then
+    # Virtualenv envvars
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/dev
+    export VIRTUAL_ENV_DISABLE_PROMPT='keep my prompt clean'
+    source virtualenvwrapper.sh
+    venv default
+fi
 
 #rbenv bin dir
 if [ -d "$HOME/.rbenv/bin" ] ; then
