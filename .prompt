@@ -45,8 +45,8 @@ prompt_git() {
             fi;
             # TODO: use ORG_HEAD instad of fetching remote
             # Check for unpushed commits
-            remote="$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null)"
-            origin_infos="";
+            local remote="$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null)"
+            local origin_infos="";
             if [ -n "${remote}" ]; then
                 commit_ahead_nb="$(git rev-list --count $remote..HEAD)"
                 if [ $commit_ahead_nb != "0" ]; then
