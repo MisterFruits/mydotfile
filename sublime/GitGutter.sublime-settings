@@ -1,0 +1,11 @@
+{
+  // Live mode evaluates changes every time file is modified,
+  // Set false to disable evaluation after each input
+  "live_mode": false,
+
+  // Determines whether GitGutter ignores whitespace in modified files.
+  // Set "none" to ensure whitespace is considered in the diff
+  // Set "all" to ignore all white space
+  // Set "eol" to only ignore whitespace at the end of lines
+  "ignore_whitespace": "all",
+}

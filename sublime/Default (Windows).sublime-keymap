@@ -1,0 +1,7 @@
+[
+    { "keys": ["ctrl+shift+b"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Build:"}},
+    { "keys": ["ctrl+v"], "command": "paste_and_indent" },
+    { "keys": ["ctrl+shift+v"], "command": "paste" },
+    { "keys": ["ctrl+)"], "command": "indent" },
+    { "keys": ["ctrl+("], "command": "unindent" },
+]
