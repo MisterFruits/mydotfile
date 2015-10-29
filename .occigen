@@ -1,3 +1,4 @@
 module purge
 module load git
 
+alias sacctinfo='sacct -u $USER --format=JobID,JobName,NNodes,AllocCPUS,start,elapsed,state'
