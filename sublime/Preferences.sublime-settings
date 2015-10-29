@@ -1,6 +1,6 @@
 {
 	"always_show_minimap_viewport": true,
-	"color_scheme": "Packages/User/base16-tomorrow.dark (Flake8Lint).tmTheme",
+	"color_scheme": "Packages/User/themes/base16-tomorrow.dark.tmTheme",
 	"animation_enabled": false,
 	"auto_complete_commit_on_tab": true,
 	"default_line_ending": "unix",
