@@ -5,10 +5,8 @@
 	],
 	"installed_packages":
 	[
-		"Base16 Color Schemes",
 		"GitGutter",
 		"Package Control",
-		"Python Flake8 Lint",
 		"Sublimerge Pro"
 	]
 }
