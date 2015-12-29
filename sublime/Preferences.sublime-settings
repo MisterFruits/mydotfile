@@ -1,19 +1,18 @@
 {
 	"always_show_minimap_viewport": true,
-	"color_scheme": "Packages/User/themes/base16-tomorrow.dark.tmTheme",
 	"animation_enabled": false,
 	"auto_complete_commit_on_tab": true,
+	"color_scheme": "Packages/User/themes/base16-tomorrow.dark.tmTheme",
 	"default_line_ending": "unix",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 14,
+	"font_size": 9,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
-	"scroll_past_end": true,
 	"indent_guide_options":
 	[
 		"draw_normal"
@@ -23,6 +22,7 @@
 	[
 		80
 	],
+	"scroll_past_end": true,
 	"show_line_endings": true,
 	"show_tab_close_buttons": false,
 	"translate_tabs_to_spaces": true,
