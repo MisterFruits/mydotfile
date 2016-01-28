@@ -38,6 +38,9 @@ fi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Disable ssh asks for a password through gui
+unset SSH_ASKPASS
+
 if [ -d "$HOME/.virtualenvs" ] ; then
     # Virtualenv envvars
     export WORKON_HOME=$HOME/.virtualenvs
