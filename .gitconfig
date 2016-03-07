@@ -9,7 +9,8 @@
 [push]
     default = simple
 [alias]
-    lg = log --all --graph --oneline --decorate
+    lg = log --stat
+    l = log --all --graph --oneline --decorate
     h = help -w
     s = status -sb
     d = diff -w
