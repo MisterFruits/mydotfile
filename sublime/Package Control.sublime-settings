@@ -6,7 +6,9 @@
 	"installed_packages":
 	[
 		"GitGutter",
+		"Markdown Extended",
 		"Package Control",
+		"RestructuredText Improved",
 		"Sublimerge Pro"
 	]
 }
