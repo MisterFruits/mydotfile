@@ -4,6 +4,12 @@ if ls --color > /dev/null 2>&1; then # GNU `ls`
 else # OS X `ls`
     colorflag="-G"
 fi
+# Colorize less via vim
+VLESS=$(find /usr/share/vim -name 'less.sh')
+if [ ! -z $VLESS ]; then
+      alias less=$VLESS
+fi
+
 
 # List all files colorized in long format
 alias ls="ls -hCF ${colorflag}"
