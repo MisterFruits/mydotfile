@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"ANSIescape",
 		"GitGutter",
 		"Markdown Extended",
 		"Package Control",
