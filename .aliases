@@ -10,6 +10,8 @@ if [ ! -z $VLESS ]; then
       alias less=$VLESS
 fi
 
+# Alias watch otherwise it wont expend aliases
+alias watch='watch '
 
 # List all files colorized in long format
 alias ls="ls -hCF ${colorflag}"
