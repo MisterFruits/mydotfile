@@ -14,7 +14,7 @@ prompt_git() {
     local branchName='';
     local tagName='';
     local timeout_cmd=''
-    command -v timeout >/dev/null 2>&1 && { timeout_cmd="timeout -m -t 2 -i 1 -d 0 "; }
+    command -v timeout3 >/dev/null 2>&1 && { timeout_cmd="timeout3 -m -t 2 -i 1 -d 0 "; }
     # Check if the current directory is in a Git repository.
     if [ $(${timeout_cmd}git rev-parse --is-inside-work-tree &>/dev/null; echo "${?}") == '0' ]; then
 
@@ -22,7 +22,8 @@ prompt_git() {
         if [ "$(git rev-parse --is-inside-git-dir 2> /dev/null)" == 'false' ]; then
 
             # Ensure the index is up to date.
-            git update-index --really-refresh -q &>/dev/null;
+            #git update-index --really-refresh -q &>/dev/null;
+            git update-index --refresh -q &>/dev/null;
 
             # Check for uncommitted changes in the index.
             if ! $(git diff --quiet --ignore-submodules --cached); then
