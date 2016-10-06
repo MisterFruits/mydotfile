@@ -1,1 +1,1 @@
-alias sacctinfo='sacct --format=JobID,JobName,NNodes,AllocCPUS,start,elapsed,state -X -D -a'
+alias sacctinfo='sacct --format=JobID,JobName,NNodes,AllocCPUS,start,elapsed,state -D -a'
