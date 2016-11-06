@@ -8,3 +8,6 @@ init_module=/usr/local/Modules/3.2.10/init/bash
 if [ -d "$init_module" ] ; then
     . $init_module
 fi
+
+export JAVA_HOME="`/usr/libexec/java_home -v 1.8`"
+
