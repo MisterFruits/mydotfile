@@ -1,3 +1,5 @@
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
 [ -n "$PROFILE_LOADED" ] && return
 PROFILE_LOADED='YES!'
 # ~/.profile: executed by the command interpreter for login shells.
