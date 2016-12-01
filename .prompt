@@ -48,7 +48,7 @@ prompt_git() {
             # Check for unpushed commits
             local remote="$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null)"
             local origin_infos="";
-            if [ -n "${remote}" ]; then
+            if [ -n "${remote}" -a "${remote}" != '@{u}' ]; then
                 commit_ahead_nb="$(git rev-list --count $remote..HEAD)"
                 if [ $commit_ahead_nb != "0" ]; then
                     origin_infos+="↑$commit_ahead_nb";
