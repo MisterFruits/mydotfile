@@ -140,7 +140,7 @@ prompt(){
         last_cmd_status="\[${green}\]✔"
     fi
 
-    PS1="\[\033]0;\u@\h: \w\007\]"; # window title
+    PS1="\[\033]0;\u@\H: \w\007\]"; # window title
     PS1+="\[${bold}\]\n"; # newline
     PS1+="$last_cmd_status "; # las command status
     PS1+="\[${violet}\][\A] "; # time
@@ -148,7 +148,7 @@ prompt(){
     if [ $PROMPT = 0 ]; then
         PS1+="\[${userStyle}\]\u"; # username
         PS1+="\[${white}\] at ";
-        PS1+="\[${hostStyle}\]\h"; # host
+        PS1+="\[${hostStyle}\]\H"; # host
         PS1+="\[${white}\] in ";
         PS1+="\[${green}\]\w"; # working directory
         PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\")"; # Git repository details
