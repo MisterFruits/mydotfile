@@ -1,1 +1,5 @@
-alias sacctinfo='sacct --format=JobID,JobName,NNodes,AllocCPUS,start,elapsed,state -D -a'
+alias sacctinfo='sacct --format=JobID,JobName,NNodes,AllocCPUS,start,elapsed,state,comment -D -a'
+function stime {
+    scontrol show job $1 | grep -i time
+}
+
