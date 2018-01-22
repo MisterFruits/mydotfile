@@ -1,5 +1,14 @@
-alias sacctinfo='sacct --format=JobID,JobName,NNodes,AllocCPUS,start,elapsed,state,comment -D -a'
-function stime {
-    scontrol show job $1 | grep -i time
+alias sacctinfo='sacct --format=JobID,JobName,NNodes,AllocCPUS,start,elapsed,state -D -a'
+alias beo="ssh root@pcp0-mn beo"
+alias hd="/home_nfs/bull/HDEEVIZ/hdeevizfile/hdeeviz_launchpost.sh"
+
+stime(){
+	scontrol show job $1 | grep -i starttime
 }
+
+if [ $HOSTNAME = "login1.frioul" ]; then
+    echo "PCP system detected, setting up scratchdir to moosefs"
+    export SCRATCHDIR=/mnt/mfs/cameo
+    mkdir -vp $SCRATCHDIR
+fi
 
