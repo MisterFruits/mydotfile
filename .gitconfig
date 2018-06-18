@@ -14,7 +14,9 @@
     h = help -w
     s = status -sb
     d = diff -w
+    dw = diff -w --color-words
     dc = diff -w --cached
+    dcw = diff -w --cached --color-words
     unstage = reset HEAD --
 
 [merge]
