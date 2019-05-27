@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+export HISTCONTROL=ignoredups:ignorespace
+
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTSIZE=1000
+export HISTFILESIZE=2000
+
+
+# Sphinx FIX
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# Disable ssh asks for a password through gui
+unset SSH_ASKPASS
+
+if [ -d "$HOME/.virtualenvs" ] ; then
+    # Virtualenv envvars
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/dev
+    export VIRTUAL_ENV_DISABLE_PROMPT='keep my prompt clean'
+    source virtualenvwrapper.sh
+fi

@@ -8,8 +8,8 @@ fi
 SOURCE=${1:-./keywords.sql}
 TEMP_SQL_SCRIPT=/tmp/sync_chrome_sql_script
 echo
-echo “Importing Chrome keywords from $SOURCE…”
-cd ~/.config/chromium/Default
+echo “Importing Chrome keywords from ${SOURCE}…”
+cd /Users/moita/Library/Application\ Support/Chromium/Default/
 echo DROP TABLE IF EXISTS keywords\; > $TEMP_SQL_SCRIPT
 echo .read $SOURCE >> $TEMP_SQL_SCRIPT
 sqlite3 -init $TEMP_SQL_SCRIPT Web\ Data .exit
