@@ -2,19 +2,19 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
-git pull origin master;
+# git pull origin master;
 
 function doIt() {
-	cd dotfiles
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude ".osx" \
-		--exclude "bootstrap.sh" \
-		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
+	cd dotfiles;
+	rsync --exclude ".DS_Store" \
 		-avh --no-perms . ~;
-	cd ..
+	cd ..;
 	source ~/.bash_profile;
+
+	cd sublime;
+	rsync --exclude ".DS_Store" \
+		-avh --no-perms . "$HOME/Library/Application Support/Sublime Text 3/Packages/User/";
+	cd ..;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
