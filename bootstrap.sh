@@ -10,11 +10,6 @@ function doIt() {
 		-avh --no-perms . ~;
 	cd ..;
 	source ~/.bash_profile;
-
-	cd sublime;
-	rsync --exclude ".DS_Store" \
-		-avh --no-perms . "$HOME/Library/Application Support/Sublime Text 3/Packages/User/";
-	cd ..;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
