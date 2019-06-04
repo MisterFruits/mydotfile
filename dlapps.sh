@@ -3,6 +3,7 @@ for app in \
     "hhttps://www.sublimetext.com/3" \
     "https://www.videolan.org/vlc/index.html" \
     "https://freemacsoft.net/appcleaner/" \
+    "https://github.com/macports/macports-base/releases/" \
     "https://developer.android.com/studio/" \; do
     killall "${app}" &> /dev/null
 done
