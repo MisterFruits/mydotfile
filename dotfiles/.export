@@ -30,3 +30,6 @@ if [ -d "$HOME/.virtualenvs" ] ; then
     export VIRTUAL_ENV_DISABLE_PROMPT='keep my prompt clean'
     source virtualenvwrapper.sh
 fi
+
+# MacPort install
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
