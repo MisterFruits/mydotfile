@@ -54,6 +54,8 @@ alias venv.proj="mkproject"
 alias venv.setproj="setvirtualenvproject"
 alias venv.wipe="wipeenv"
 
+alias sacctinfo='sacct --format=JobID,JobName,NNodes,AllocCPUS,start,elapsed,state -X -D -a'
+
 # Box IP addresse
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
@@ -67,5 +69,3 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Bootstrap open to work with xubuntu
 command -v xdg-open > /dev/null && alias open="xdg-open"
-
-alias rasp='ssh pi@raspberrypi -X'
