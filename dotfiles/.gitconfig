@@ -23,3 +23,5 @@
     trustExitCode = false
 [diff]
     algorithm = patience
+[pull]
+	ff = only
